@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Webpage</title>
+    <link rel="stylesheet" href="Webpage.css">
+</head>
+<body>
+    <nav>
+        
+        <a href = "#home">Home</a>
+        <a href = "#about">About</a>
+        <a href = "#contactus">Contact Us</a>
+    </nav>
+    <header>
+        <div>
+            <h1>ManMode</h1>
+            <p><b>Uncompromising Style for Gentlemen</b></p>
+            <button class="buttonShop">Shop now!</button>
+        </div>
+
+        <div >
+            <img src ="photos/man3.jpg" class = "man-image" alt="A man">
+        </div>
+    </header>
+    <div>
+        <hr>
+    </div>
+    <br>
+    <section id="about">
+        <div class = "contianer">
+            <h2>About Our Shop</h2>
+            <p class = "quote"><em>"Redefining Men's Fashion with Style, Comfort, and Elegance"</em></p>
+            <div class = "content">
+                <div class = "intro-text">
+                    <p>
+                        Welcome to <strong>ManMode</strong>, where premium men's fashion meets timeless elegance and modern trends. We offer high-quality apparel that balances style, comfort, and individuality. Whether you're seeking smart casuals, formal wear, or everyday essentials, we’ve got you covered.  
+                    </p>
+                    <p>
+                        Our mission is to provide exceptional products and a seamless shopping experience, so you can look and feel your best. Explore ManMode and elevate your wardrobe today!
+                    </p>
+                </div>
+
+                <div class = "why-choose-us">
+                    <h3>Why Choose Us?</h3>
+                    <ul>
+                        <li>Premium quality fabrics for unmatched comfort</li>
+                        <li>Exclusive designs blending tradition and modernity.</li>
+                        <li>Affordable luxury for every occasion.</li>
+                        <li>Exceptional customer service, always ready to assist.</li>
+                    </ul>
+                </div>
+                
+                <p class = "cta">Discover the difference with ManMode – your destination for timeless men's fashion. Explore our Collection.</p>
+            </div>
+
+
+        </div>
+        
+    </section>
+    <hr>
+
+    <div class ="text">
+        <h3>Our Collections for Men!</h3>
+        <p>Here you can find our update collection. Feel free to check and buy what ever you want. Happy Shoppinng!</p>
+    </div>
+
+    <div class="freatures" >
+        
+        <div>
+            <img src ="Photos/F1.jpg" class = "collection" alt="shirt">
+            <span class="title">Shirt</span>
+            <button class="buttonSirt">Buy now</button>
+        </div>
+        <div>
+            <img src ="Photos/P1.JPEG" class = "collection" alt="pant">
+            <span class="title">Pant</span>
+            <button class="buttonSirt">Buy now</button>
+        </div>
+        <div>
+            <img src ="Photos/F2.JPEG" class = "collection" alt="formal">
+            <span class="title">Formal Shirt and Pant</span>
+            <button class="buttonSirt">Buy now</button>
+        </div>
+
+        <div>
+            <img src ="Photos/T1.JPEG" class = "collection" alt="T-shirt">
+            <span class="title">T-shirt</span>
+            <button class="buttonSirt">Buy now</button>
+        </div>
+        
+        <div>
+            <img src ="Photos/T2.JPEG" class = "collection" alt="formal">
+            <span class="title">Trouser</span>
+            <button class="buttonSirt">Buy now</button>
+        </div>
+    </div> 
+    <hr>
+   
+    <section id="contactus">
+        <div class="Contact-Container">
+            <div class="contactus">
+                <h2>Contact Us</h2>
+                <p>
+                    Need to get in touch with us? Either fill out the form with your inquiry or 
+                find the <a href="mailto:department@example.com">department email</a> you'd like to contact below.
+                </p>
+            </div>
+
+            <div class="contact-sector">
+                <form action="#" method="POST" id = "myform">
+                <div class="info">
+                    <label for="name">First Name:</label><br/>
+                    <input type="text" id="first-name" name="first name" required>
+                </div>
+
+                <div class="info">
+                    <label for="name">Last Name:</label><br/>
+                    <input type="text" id="last-name" name="last name" required autofocus>
+                </div>
+
+                <div class="info">
+                    <label for="name">Message</label><br/>
+                    <textarea type="text" id="message" name="message" required autofocus></textarea>
+                </div>
+                <button type="button" class="submit-button" id = "submitButton">Submit</button>
+            </form>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        const submitButton = document.getElementById('submitButton');
+        const form = document.getElementById('myform');
+        submitButton.addEventListener('click', function() {
+            const firstName = document.getElementById('first-name').value.trim();
+            const lastName = document.getElementById('last-name').value.trim(); 
+            const message = document.getElementById('message').value.trim();  
+            
+            if(firstName && lastName && message) {
+                submitButton.style.backgroundColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+                alert('Your form has been submitted succesfully!');
+            } else {
+                alert('Please fill in all the required fields before submitting.')
+            }
+        });
+    </script>
+
+
+<footer class = "footer">
+    <p>&copy; 2024 ManMode. All rights reserved.</p>
+</footer>
+</body>
+</html>
